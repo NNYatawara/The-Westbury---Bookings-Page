@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Westbury - Bookings</title>
+    <link rel="stylesheet" href="./bookingstyle.css" type="text/css">
+    <link rel="apple-touch-icon" sizes="152x152" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+<!-- navbar -->
+<header>
+    <a href="./index.html" class="logo"><img src="./logo.png" alt=""></a>
+    <ul class="menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./rooms.html">Rooms</a></li>
+        <li><a href="./dining.html">Dining</a></li>
+        <li><a href="./adventures.html">Adventures</a></li>
+        <li><a href="./branches.html">Branches</a></li>
+        <li><a href="./bookings.html" class="active">Bookings</a></li>
+        <li><a href="./contactus.html">Contact Us</a></li>
+    </ul>
+</header>
+
+
+<section class="container">
+
+    <section class="header">BOOK ROOMS</section>
+
+    <form class="form" id="roomsForm">
+
+        <br>
+        <h1>Guest Information</h1>
+        <br>
+
+        <section class="inputbox">
+            <label for="name">Full Name</label>
+            <input type="text" placeholder="Enter Full Name" required id="name" autocomplete="additional-name">
+        </section>
+
+        <section class="inputbox">
+            <label for="address">Address</label>
+            <input type="text" placeholder="Enter Address" required id="address" autocomplete="address-level1">
+        </section>
+
+        <section class="inputbox">
+            <label for="country">Country</label>
+            <input type="text" placeholder="Enter Country" required id="country" autocomplete="country">
+        </section>
+
+        <section class="column">
+            <section class="inputbox">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" placeholder="Enter Phone Number" required id="phoneNumber">
+            </section>
+            <section class="inputbox">
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="Enter Email Address" required id="email" autocomplete="email">
+            </section>
+        </section>
+
+        <br><br><br>
+        <h1>Check Availability</h1>
+        <br>
+
+        <section class="column">
+            <section class="inputbox">
+                <label for="checkin">Check In Date</label>
+                <input type="date" placeholder="" required id="checkin">
+            </section>
+            <section class="inputbox">
+                <label for="checkout">Check Out Date</label>
+                <input type="date" placeholder="" required id="checkout">
+            </section>
+        </section>
+
+        <section class="column">
+            <section class="inputbox">
+                <label for="roomAdults">Number of Adults</label>
+                <input type="number" placeholder="Select number of adults" min="0" id="roomAdults">
+            </section>
+            <section class="inputbox">
+                <label for="roomChildren">Number of Children</label>
+                <input type="number" placeholder="Select number of children" min="0" id="roomChildren">
+            </section>
+        </section> 
+
+        <section class="column">
+            <section class="inputbox">
+                <label for="above5kids">Number of Children above 5 years</label>
+                <input type="number" placeholder="Number of children above 5 years" min="0" id="above5kids">
+            </section>
+            <section class="inputbox">
+                <label for="promocode">Promo Code</label>
+                <input type="text" placeholder="Enter Promo Code" id="promocode">
+            </section>
+        </section> 
+
+        <br><br><br>
+        <h1>Room Selection</h1>
+        <br>
+
+        <section class="column">
+            <section class="inputbox">
+                <label for="single">Number of Single Rooms</label>
+                <input type="number" placeholder="0" min="0" id="single">
+            </section>
+            <section class="inputbox">
+                <label for="double">Number of Double Rooms</label>
+                <input type="number" placeholder="0" min="0" id="double">
+            </section>
+            <section class="inputbox">
+                <label for="triple">Number of Triple Rooms</label>
+                <input type="number" placeholder="0" min="0" id="triple">
+            </section>
+        </section>
+
+        <br><br><br>
+        <h1>Extra Requirements</h1>
+        <br><br>
+
+        <section class="column">
+        <section class="radiobox">
+            <h3>Wi-Fi</h3>
+            <section class="radiooption">
+                <section class="radiobutton">
+                    <input type="radio" id="yes" name="wifi" value="yes">
+                    <label for="yes">Yes</label>
+                </section>
+            </section>
+            <section class="radiooption">
+                <section class="radiobutton">
+                    <input type="radio" id="no" name="wifi" value="no">
+                    <label for="no">No</label>
+                </section>
+            </section>
+        </section>
+
+        <br><br>
+
+        <section class="radiobox">
+            <h3>View</h3>
+            <section class="radiooption">
+                <section class="radiobutton">
+                    <input type="radio" id="pool" name="view" value="pool">
+                    <label for="pool">Pool View</label>
+                </section>
+            </section>
+
+            <section class="radiooption">
+                <section class="radiobutton">
+                    <input type="radio" id="garden" name="view" value="garden">
+                    <label for="garden">Garden View</label>
+                </section>
+            </section>
+        </section>
+        </section>
+
+        <br>
+
+        <section class="inputbox">
+            <label for="extra">Number of Extra Beds</label>
+            <input type="number" placeholder="0" min="0" id="extra">
+        </section>
+
+        <br><br><br>
+        <h1>Loyalty Points</h1>
+        <br><br>
+
+        <p>Earn 20 loyalty points for all bookings above 3 rooms.</p>
+
+        <center><button id="loyaltyButton" type="button">Check Loyalty Points</button></center>
+        <br>
+        <p id="loyaltyPointsNumber" class="outputbox"></p>
+
+        <br><br><br>
+        <h1>Current Room Bookings</h1>
+        <br><br>
+
+        <section class="output">
+        
+        <table id="reservationTable">
+            <tr class="bookingsummary">
+              <th colspan="3">Room Booking Summary</th>
+            </tr>
+            <tr>
+              <td>Single Rooms</td>
+              <td class="costtable"><p id="displaySingle">0</p></td>
+              <td id="singleRoomCost" class="costtable"><p id="singleCost">LKR 0.00</p></td>
+            </tr>
+            <tr>
+              <td>Double Rooms</td>
+              <td class="costtable"><p id="displayDouble">0</p></td>
+              <td id="doubleRoomCost" class="costtable"><p id="doubleCost">LKR 0.00</p></td>
+            </tr>
+            <tr>
+              <td>Triple Rooms</td>
+              <td class="costtable"><p id="displayTriple">0</p></td>
+              <td id="tripleRoomCost" class="costtable"><p id="tripleCost">LKR 0.00</p>
+              </td>
+            </tr>
+            <tr>
+                <td>Extra Beds</td>
+                <td class="costtable"><p id="displayExtra">0</p></td>
+                <td id="extraRoomCost" class="costtable"><p id="extraCost">LKR 0.00</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Kids above 5 years</td>
+                <td class="costtable"><p id="displayAbove5kids">0</p></td>
+                <td id="Above5KidsCost" class="costtable"><p id="above5Cost">LKR 0.00</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Total Cost</td>
+                <td id="totalRoomCost" class="costtable" colspan="2"><p id="totalCost">LKR 0.00</p></td>
+            </tr>
+            <tr>
+                <td>Discounted Total Cost</td>
+                <td id="discountedTotalRoomCost" class="costtable" colspan="2"><p id="discountedTotalCost">LKR 0.00</p></td>
+            </tr>
+            <tr>
+              <td>WiFi</td>
+              <td id="wifiCost" colspan="2"><p id="wifiRequirement">Wifi requirement is displayed here</p></td>
+            </tr>
+            <tr>
+              <td>Room View</td>
+              <td id="roomViewCost" colspan="2"><p id="selectedView">The selected view will be displayed here.</p></td>
+            </tr>
+          </table>
+        </section>
+
+        <section class="column">
+            <button type="submit" id="bookNowButton">Book Now</button>
+
+            <button type="submit" id="favourites">Add to Favourites</button>
+        </section>
+
+        
+    </form>
+</section>
+
+
+<section class="container">
+
+    <section class="header">BOOK ADVENTURES</section>
+
+    <form class="form" id="adventureForm">
+
+        <h3>Diving Adventures</h3>
+
+        <section class="column">
+            <section class="inputbox">
+                <label for="adventureAdults">Number of Adults</label>
+                <input type="number" placeholder="Select number of adults" min="0" id="adventureAdults">
+            </section>
+            <section class="inputbox">
+                <label for="adventureChildren">Number of Children</label>
+                <input type="number" placeholder="Select number of children" min="0" id="adventureChildren">
+            </section>
+        </section> 
+
+        <section class="inputbox">
+            <label for="hours">Number of Hours</label>
+            <input type="number" placeholder="0" min="0" id="hours">
+        </section>
+
+        <section class="column">
+        <section class="radiobox">
+            <h3>Nationality</h3>
+            <section class="radiooption">
+                <section class="radiobutton">
+                    <input type="radio" id="local" name="nationality">
+                    <label for="local">Local</label>
+                </section>
+            </section>
+            <section class="radiooption">
+                <section class="radiobutton">
+                    <input type="radio" id="foreign" name="nationality">
+                    <label for="foreign">Foreign</label>
+                </section>
+            </section>
+        </section>
+
+        <br><br><break></break>
+
+        <section class="radiobox">
+            <h3>Diving Guide Requirement</h3>
+            <section class="radiooption">
+                <section class="radiobutton">
+                    <input type="radio" id="guideyes" name="guide">
+                    <label for="yes">Yes</label>
+                </section>
+            </section>
+
+            <section class="radiooption">
+                <section class="radiobutton">
+                    <input type="radio" id="guideno" name="guide">
+                    <label for="no">No</label>
+                </section>
+            </section>
+        </section>
+        </section>
+
+        <br>
+
+        <br><br><br>
+        <h1>Current Adventure Bookings</h1>
+        <br><br>
+
+        <table id="reservationTable">
+            <tr class="bookingsummary">
+              <th colspan="3">Adventure Bookings</th>
+            </tr>
+            <tr>
+              <td>Adults</td>
+              <td class="costtable"><p id="displayAdults">0</p></td>
+              <td id="adultPersonCost" class="costtable"><p id="adultsCost">LKR 0.00</p></td>
+            </tr>
+            <tr>
+              <td>Children</td>
+              <td class="costtable"><p id="displayChildren">0</p></td>
+              <td id="childPersonCost" class="costtable"><p id="childrenCost">LKR 0.00</p></td>
+            </tr>
+            <tr>
+                <td>Guide</td>
+                <td class="costtable"><p id="displayGuide"></p></td>
+                <td id="guidePersonCost" class="costtable"><p id="guideCost">LKR 0.00</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Total Cost</td>
+                <td id="totalAdventureCost" class="costtable" colspan="2"><p id="totalCostAdventure">LKR 0.00</p></td>
+            </tr>
+          </table>
+       
+        <center><button id="bookAdventure" type="submit">BOOK ADVENTURE</button></center>
+    </form>
+</section>
+
+<section class="container">
+    <h2>Overall Bookings</h2><br>
+    <section id="overallRooms"></section>
+    <section id="overallAdventure"></section>
+</section>
+
+<!-- image gallery -->
+<section class="imagegallery">
+    <section class="image">
+      <img src="./gallery4.jpg" alt="Image 1">
+    </section>
+    <section class="image">
+      <img src="./gallery3.jpg" alt="Image 2">
+    </section>
+    <section class="image">
+      <img src="./gallery10.jpg" alt="Image 3">
+    </section>
+    <section class="image">
+      <img src="./gallery1.jpg" alt="Image 4">
+    </section>
+  </section>
+
+  <script src="./bookingcorrect.js"></script>
+</body>
+<!-- footer -->
+<footer>
+    <section class="footerrow">
+
+        <section class="footercolumn">
+            <img src="./logo.png" alt="logo" id="footerlogo">
+            <p>The Westbury - Nuwaraeliya</p>
+            <p>Your luxury holiday in the romantically cool climes of the Hill Country is defined anew at the Palace of Sri Lanka. From the moment you depart when we would gather together to bid you adieu, your welfare and comfort are our priority</p>
+        </section>
+
+        <section class="footercolumn">
+            <h3>Contact Us</h3>
+            <p>No. 17</p>
+            <p>Udupussellawa Road, Nuwara Eliya</p>
+            <p>22200, Sri Lanka</p>
+            <p class="email">thewestbury@gmail.com</p>
+            <h4>+94 522 224 666</h4>
+        </section>
+
+        <section class="footercolumn">
+             <ul class="footermenu">
+                <li><a href="./index.html" class="footerlinks">Home</a></li><br>
+
+                <li><a href="./rooms.html" class="footerlinks">Rooms</a></li><br>
+
+                <li><a href="./dining.html" class="footerlinks">Dining</a></li><br>
+
+                <li><a href="./adventures.html" class="footerlinks">Adventures</a></li><br>
+
+                <li><a href="./branches.html" class="footerlinks">Branches</a></li><br>
+
+                <li><a href="./bookings.html" class="footerlinks">Bookings</a></li><br>
+
+                <li><a href="./contactus.html" class="footerlinks">Contact us</a></li><br>
+
+             </ul>
+        </section>
+
+        <section class="footercolumn">
+            <section class="followus">
+                <a href="https://web.facebook.com/Westburypalace/?_rdc=1&_rdr" class="socialmedia">Facebook</a>
+                <a href="https://www.instagram.com/thewestburypalace/?hl=en" class="socialmedia">Instagram</a>
+                <a href="https://www.tripadvisor.com/Hotel_Review-g608524-d17471717-Reviews-The_Westbury_Palace-Nuwara_Eliya_Central_Province.html" class="socialmedia">TripAdvisor</a>
+            </section>
+        </section>
+
+    </section>
+
+<!-- References
+https://www.thewestburypalace.com/
+https://www.cinnamonhotels.com/
+https://www.pexels.com/ -->
+
+</footer>
+
+</html>
